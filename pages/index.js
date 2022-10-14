@@ -1,21 +1,14 @@
-import Head from "next/head";
-
 import ArticleList from "../components/ArticleList";
 
 import { server } from "../config";
 
-export default function Home({ articles }) {
+const HomePage = ({ articles }) => {
   return (
     <div>
-      <Head>
-        <title>WebDev Newz</title>
-        <meta name="keywords" conent="web development, programming" />
-      </Head>
-
       <ArticleList articles={articles} />
     </div>
   );
-}
+};
 
 // export const getStaticProps = async () => {
 //   const res = await fetch(
@@ -40,3 +33,5 @@ export const getStaticProps = async () => {
     },
   };
 };
+
+export default HomePage;
